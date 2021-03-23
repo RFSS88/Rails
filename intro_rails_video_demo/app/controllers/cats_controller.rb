@@ -13,16 +13,20 @@ class CatsController < ApplicationController
   # end
 
   def index
-    # This is the method that will run when we make a GET request
     # (GET /cats)
+    # This is the method that will run when we make a GET request
+    
     if params[:tag]
       @cats = Tag.find_by(name: params[:tag]).cats
     else
       @cats = Cat.all
     end
     render :index
+    # Render is a method in ApplicationController
     # here render = .self render
-    # we can use render jason: cats to output jason. 
+    # we can use render jason: cats to output jason.
+    # params is a method from ApplicationController
+    # It fetches the :id from the path in the request.  
   end
 
   def show
