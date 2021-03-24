@@ -43,6 +43,7 @@ class CatsController < ApplicationController
 
   def create
     # POST /cats
+    # This is how we'd do with another method. Maybe HTML?? 
     # Content-Length: ...
     #
     # { "cat": { "name": "Sally" } }
@@ -58,6 +59,8 @@ class CatsController < ApplicationController
       render :new
 
       # render json: @cat.errors.full_messages, status: :unprocessable_entity
+      # This line here is a basic way of doing. We go on to create a more advanced
+      # version of this. 
     end
   end
 
