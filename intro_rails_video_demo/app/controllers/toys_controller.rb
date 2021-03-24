@@ -52,7 +52,17 @@ class ToysController < ApplicationController
   end
 
   protected
+  # we creat this method in order to keep the code dry 
+  # it makes sense in most cases to be able to both create and update
+  # the same attributes. This way we dry the code. 
   def toy_params
     self.params[:toy].permit(:cat_id, :name, :ttype)
+    #self.params returns an object of type Paramters(HashWithDifferentAccess < Hash)
+    # Like hash with some extra stuff
+    # permit whitelist whitelist the attributes given so that ActiveRecord will set them 
+    # when I mass assign. 
+    # This method makes it so that only those things in my permit method 
+    # can be updated 
   end
 end
+          
