@@ -1,3 +1,7 @@
+# instance variable in the controllers (ie @cats)
+# The reason we make the instance variables, is so that they are
+# accessible in the views file 
+
 class CatsController < ApplicationController
   # before_action do
   #   return if session[:notice].nil?
@@ -104,6 +108,8 @@ class CatsController < ApplicationController
     flash[:notice] = "Deleted #{cat.name}"
     redirect_to cats_url
 
+
+    # steps to create a cat:
     # 1. GET /cats
     # 2. Click delete button
     # 3. Sends POST /cats/123; but _method="DELETE" so rails understands
