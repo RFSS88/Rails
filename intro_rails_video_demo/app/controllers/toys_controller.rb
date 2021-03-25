@@ -2,12 +2,19 @@ class ToysController < ApplicationController
   def index
     # /cats/:cat_id/toys
     cat = Cat.find(params[:cat_id])
+    # This i part of it being a nested resource,
+    # This way we first find the cat object from the params
+    # and the render the toys in that object instead of the 
+    # simple Toy.all as before 
     render json: cat.toys
+
   end
 
   def show
     # /toys/:id
     render json: Toy.find(self.params[:id])
+    # This also work for nested resources. So it would work for a path like this:
+    # /cats/:cat_id/toys/:id
   end
 
   def destroy

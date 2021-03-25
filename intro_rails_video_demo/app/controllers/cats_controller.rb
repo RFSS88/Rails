@@ -25,6 +25,7 @@ class CatsController < ApplicationController
     # Render is a method in ApplicationController
     # here render = .self render
     # we can use render jason: cats to output jason.
+    # This way we're rendering the index file in views. 
     # params is a method from ApplicationController
     # It fetches the :id from the path in the request.  
   end
