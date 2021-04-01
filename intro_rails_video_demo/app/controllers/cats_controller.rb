@@ -38,6 +38,9 @@ class CatsController < ApplicationController
     # GET /cats/123
     @cat = Cat.find(params[:id])
     render :show
+    # NOte that in this line we're not calling the show method.
+    # if we did we would be in a infinite loop
+    # :show in here is calling calling the show views template
   end
 
   # 1. GET Request for blank /cats/new form
@@ -68,7 +71,7 @@ class CatsController < ApplicationController
       # version of this. 
     end
   end
-
+  # steps that are being taken to create the cat.
   # 1. GET /cats/new to fetch a form
   # 2. User fills out form, clicks submit.
   # 3. POST /cats the data in the form
@@ -109,7 +112,7 @@ class CatsController < ApplicationController
     redirect_to cats_url
 
 
-    # steps to create a cat:
+    # steps to destroy a cat:
     # 1. GET /cats
     # 2. Click delete button
     # 3. Sends POST /cats/123; but _method="DELETE" so rails understands
