@@ -34,6 +34,9 @@ class CatsController < ApplicationController
     # It fetches the :id from the path in the request.  
   end
 
+
+
+
   def show
     # GET /cats/123
     @cat = Cat.find(params[:id])
@@ -49,6 +52,10 @@ class CatsController < ApplicationController
   # 4. Server render new template again.
   # 5. The form is filled in with @cat data
 
+  
+  
+  
+  
   def create
     # POST /cats
     # This is how we'd do with another method. Maybe HTML?? 
@@ -80,6 +87,9 @@ class CatsController < ApplicationController
   # 6. Client makes a GET request for /cats/#{id}
   # 7. Show action for newly created cat is invoked.
 
+  
+  
+  
   def new
     # /cats/new
     # show a form to create a new object
@@ -96,6 +106,8 @@ class CatsController < ApplicationController
     end
   end
 
+
+
   def edit
     # /cats/:id/edit
     # show a form to edit an existing object
@@ -103,6 +115,9 @@ class CatsController < ApplicationController
     render :edit
   end
 
+
+
+  
   def destroy
     # DELETE /cats/:id
     cat = Cat.find(params[:id])
