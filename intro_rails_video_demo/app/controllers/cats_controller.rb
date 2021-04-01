@@ -69,7 +69,7 @@ class CatsController < ApplicationController
       # cat_url(@cat) == /cats/...
       flash[:notice] = "Created #{@cat.name}"
       redirect_to cat_url(@cat)
-    else
+    else #very common mistake here is not use else here. We can render or redirect. Not both. 
       # redirect_to new_cat_url
       render :new
 
@@ -117,7 +117,7 @@ class CatsController < ApplicationController
 
 
 
-  
+
   def destroy
     # DELETE /cats/:id
     cat = Cat.find(params[:id])

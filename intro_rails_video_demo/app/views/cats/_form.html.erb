@@ -1,3 +1,13 @@
+<!-- We do this in order to dry both new and edit/update form 
+    the leading underscore
+
+    persisted?: asks if it's been saved to the database. 
+
+    We do not used instance variables in partials. (ie @cat)
+    we do this fromm the forms that are using this partial instead. 
+-->
+
+
 <% action_url = cat.persisted? ? cat_url(cat) : cats_url %>
 <% form_method = cat.persisted? ? "PATCH" : "POST" %>
 <% submit_text = cat.persisted? ? "Update Cat!" : "Create Cat!" %>

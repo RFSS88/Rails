@@ -3,7 +3,17 @@
 <%= render "form", cat: @cat %>
 
 
-<!-- We have the form, so that when we fill something
+<!-- 
+this line renders a partial. We only use a partial if we're using the things 
+in more than one place. 
+
+the cat: @cat is what allows us to use normal variables instead of instances in the partial
+ 
+
+ if we follow up this is whats happening, i think? 
+ I thikn the code that does thisis my partial 
+
+We have the form, so that when we fill something
 but faile to save it. It does not simply disapear,
-but its instead saved there for when the user tryes again 
+but its instead remains there for when the user tryes again 
 to do it properly. -->

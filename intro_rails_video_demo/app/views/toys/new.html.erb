@@ -12,6 +12,8 @@
   <br>
 
   <label for="toy_ttype">Type</label>
+  <!-- a label is better as we have validate the type of fo toy
+  so if we let the user input we can run into validations problems-->
   <select name="toy[ttype]" id="toy_ttype">
     <% Toy::TYPES.each do |type| %>
       <option value="<%= type %>"
